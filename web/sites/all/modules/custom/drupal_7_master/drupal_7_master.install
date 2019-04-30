@@ -1,0 +1,11 @@
+<?php
+
+function drupal_7_master_install() {
+  // Enable the admin theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'adminimal_theme')
+    ->execute();
+  variable_set('admin_theme', 'adminimal_theme');
+}
