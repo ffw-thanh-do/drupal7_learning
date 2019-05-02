@@ -5,7 +5,19 @@ function drupal_7_master_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'adminimal_theme')
+    ->condition('name', 'adminimal')
     ->execute();
-  variable_set('admin_theme', 'adminimal_theme');
+  variable_set('admin_theme', 'adminimal');
+
+  module_disable(array(
+    'overlay',
+    'toolbar',
+  ));
+  module_enable(array(
+    'adminimal_admin_menu',
+    'module_filter',
+    'drupal_7_wysiwyg',
+    'diff',
+    'drupal_7_content_type',
+  ));
 }

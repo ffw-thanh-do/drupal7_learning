@@ -32,9 +32,6 @@ local_settings ()
 {
   cd $DOCROOT_PATH
 
-  # Remove .gitignore file
-  rm -rf .gitignore
-
   # These are configured in docksal.env
   drush en ${MODULES_ENABLED} -y
   drush dis ${MODULES_DISABLED} -y
