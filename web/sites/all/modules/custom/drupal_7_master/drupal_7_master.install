@@ -9,3 +9,14 @@ function drupal_7_master_install() {
     ->execute();
   variable_set('admin_theme', 'adminimal_theme');
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Revert drupal_7_wysiwyg feature to add Accessiblity checker plugin to ckeditor.
+ */
+function drupal_7_master_update_7001() {
+  features_revert(array(
+    'drupal_7_wysiwyg' => array('ckeditor_profile'),
+  ));
+}
