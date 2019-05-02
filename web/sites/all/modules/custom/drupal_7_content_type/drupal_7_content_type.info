@@ -1,0 +1,13 @@
+name = Drupal 7 Content type
+core = 7.x
+package = Main features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_image
+features[field_instance][] = node-component_ct-body
+features[field_instance][] = node-component_ct-field_image
+features[node][] = component_ct
