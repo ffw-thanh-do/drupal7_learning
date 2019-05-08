@@ -2,5 +2,16 @@
 
 /**
  * @file
- * Drupal needs this blank file.
+ * drupal_7_wysiwyg.module
  */
+
+/**
+ * Implements hook_ckeditor_settings_alter().
+ */
+function drupal_7_wysiwyg_ckeditor_settings_alter(&$settings, $conf) {
+  drupal_add_js(drupal_get_path('module', 'drupal_7_wysiwyg') . '/js/ckeditor.config.js', array(
+    'type' => 'file',
+    'scope' => 'footer',
+    'weight' => 1,
+  ));
+}
