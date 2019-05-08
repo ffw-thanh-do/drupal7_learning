@@ -21,3 +21,14 @@ function drupal_7_master_install() {
     'drupal_7_content_type',
   ));
 }
+
+/**
+ * Implements hook_update_N().
+ *
+ * Revert drupal_7_content_type feature to limit image size update on Component CT.
+ */
+function drupal_7_master_update_7001() {
+  features_revert(array(
+    'drupal_7_content_type' => array('field_instance'),
+  ));
+}
