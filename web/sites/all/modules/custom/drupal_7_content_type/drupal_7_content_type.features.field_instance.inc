@@ -87,7 +87,7 @@ function drupal_7_content_type_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '10M',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
