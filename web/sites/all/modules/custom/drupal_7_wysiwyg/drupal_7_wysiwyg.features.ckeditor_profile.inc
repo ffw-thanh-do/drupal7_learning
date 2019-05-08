@@ -25,7 +25,7 @@ function drupal_7_wysiwyg_ckeditor_profile_defaults() {
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'BidiLtr\',\'BidiRtl\'],
-    [\'Link\',\'Unlink\',\'Anchor\']
+    [\'Link\',\'Unlink\',\'Anchor\',\'A11ychecker\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -67,6 +67,22 @@ function drupal_7_wysiwyg_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => 'config.allowedContent = true;',
         'loadPlugins' => array(
+          'a11ychecker' => array(
+            'name' => 'a11ychecker',
+            'desc' => 'Accessibility checker',
+            'path' => '%base_path%sites/all/modules/custom/drupal_7_wysiwyg/ckeditor/a11ychecker/',
+            'buttons' => array(
+              'A11ychecker' => array(
+                'label' => 'Check Accessibility',
+                'icon' => '/icons/a11ychecker.png',
+              ),
+            ),
+          ),
+          'balloonpanel' => array(
+            'name' => 'balloonpanel',
+            'desc' => 'Balloon panel',
+            'path' => '%base_path%sites/all/modules/custom/drupal_7_wysiwyg/ckeditor/balloonpanel/',
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
@@ -138,7 +154,7 @@ function drupal_7_wysiwyg_ckeditor_profile_defaults() {
     \'/\',
     [\'Format\',\'Font\',\'FontSize\'],
     [\'TextColor\',\'BGColor\'],
-    [\'Maximize\',\'ShowBlocks\']
+    [\'Maximize\',\'ShowBlocks\',\'A11ychecker\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -180,6 +196,22 @@ function drupal_7_wysiwyg_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => 'config.allowedContent = true;',
         'loadPlugins' => array(
+          'a11ychecker' => array(
+            'name' => 'a11ychecker',
+            'desc' => 'Accessibility checker',
+            'path' => '%base_path%sites/all/modules/custom/drupal_7_wysiwyg/ckeditor/a11ychecker/',
+            'buttons' => array(
+              'A11ychecker' => array(
+                'label' => 'Check Accessibility',
+                'icon' => '/icons/a11ychecker.png',
+              ),
+            ),
+          ),
+          'balloonpanel' => array(
+            'name' => 'balloonpanel',
+            'desc' => 'Balloon panel',
+            'path' => '%base_path%sites/all/modules/custom/drupal_7_wysiwyg/ckeditor/balloonpanel/',
+          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',

@@ -4,3 +4,34 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_ckeditor_plugin().
+ */
+function drupal_7_wysiwyg_ckeditor_plugin() {
+  return array(
+    'balloonpanel' => array(
+      // Plugin name.
+      'name' => 'balloonpanel',
+      // Plugin description - it will be displayed in the plugins management section of the profile settings.
+      'desc' => t('Balloon panel'),
+      // The full path to the CKEditor plugin directory, trailing slash included.
+      'path' => drupal_get_path('module', 'drupal_7_wysiwyg') . '/ckeditor/balloonpanel/',
+    ),
+    'a11ychecker' => array(
+      // Plugin name.
+      'name' => 'a11ychecker',
+      // Plugin description - it will be displayed in the plugins management section of the profile settings.
+      'desc' => t('Accessibility checker'),
+      // The full path to the CKEditor plugin directory, trailing slash included.
+      'path' => drupal_get_path('module', 'drupal_7_wysiwyg') . '/ckeditor/a11ychecker/',
+      // Plugin buttons definition (optional).
+      'buttons' => array(
+        'A11ychecker' => array(
+          'label' => t('Check Accessibility'),
+          'icon' => '/icons/a11ychecker.png'
+        ),
+      ),
+    )
+  );
+}
