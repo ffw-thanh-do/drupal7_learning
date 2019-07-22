@@ -34,8 +34,11 @@
         "drupal/composer_autoloader": "^1.0",
         "drupal/diff": "^3.4",
         "drupal/drupal": "^7",
+        "drupal/entityreference": "^1.5",
         "drupal/features": "^2.11",
         "drupal/module_filter": "^2.2",
+        "drupal/panels": "^3.9",
+        "drupal/views": "^3.23",
         "drush/drush": "^8.0",
         "symfony/filesystem": "~2.7|^3",
         "webflo/drupal-finder": "^1.0.0"

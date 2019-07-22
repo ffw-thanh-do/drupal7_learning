@@ -6,3 +6,17 @@
  */
 
 include_once 'drupal_7_content_type.features.inc';
+
+function drupal_7_content_type_views_query_alter(&$view, &$query) {
+  if ($view->name == 'blog' && $view->current_display == 'panel_pane_1') {
+    $node = menu_get_object();
+    // Hidden content_related view when field_suggested_reading got content.
+    if (isset($node->nid) && field_get_items('node', $node, 'field_content_reference')) {
+      $field = 'node.nid';
+      $value = NULL;
+      $operator = '=';
+      $count = count($query->where);
+      $query->add_where($count, $field, $value, $operator);
+    }
+  }
+}
